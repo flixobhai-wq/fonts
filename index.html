@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="google-site-verification" content="Iq1gnrA_tmHyHyHvNUsF4IPK1ruoPmsO9ukojJGruec" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f7f8ff">
+<meta name="description" content="Fontify is a free stylish text generator with 200+ copyable Unicode font styles.">
+<title>Fontify — Stylish Font Generator</title>
+<style>
+:root{--bg:#f7f8ff;--card:#fff;--ink:#20243a;--muted:#737991;--primary:#6558e8;--line:#e8e9f3;--soft:#f0efff;--shadow:0 12px 35px #34306b12}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+header{position:sticky;top:0;z-index:5;background:#ffffffeb;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{max-width:1100px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{font-size:1.5rem;font-weight:850;letter-spacing:-1px;color:var(--primary);text-decoration:none}.brand span{color:#252943}
+.nav-note{font-size:.86rem;color:var(--muted)}
+main{max-width:1100px;margin:auto;padding:34px 20px 70px}.hero{text-align:center;padding:42px 12px 30px}.tag{display:inline-block;background:var(--soft);color:var(--primary);font-weight:750;font-size:.78rem;padding:7px 12px;border-radius:30px}.hero h1{font-size:clamp(2.2rem,6vw,4rem);line-height:1.05;letter-spacing:-2px;margin:18px 0 12px}.gradient{background:linear-gradient(100deg,#6558e8,#b14bd4);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{color:var(--muted);max-width:610px;margin:auto;line-height:1.65}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:22px;max-width:850px;margin:0 auto 28px}.field-label{display:block;font-size:.88rem;font-weight:750;margin-bottom:9px}input{width:100%;border:1px solid var(--line);border-radius:12px;padding:14px 15px;font:inherit;color:var(--ink);background:#fff;outline:none}input:focus{border-color:var(--primary);box-shadow:0 0 0 3px #6558e81c}.controls{display:flex;gap:10px;margin-top:12px}.controls>*{flex:1}.btn{border:0;border-radius:12px;padding:12px 16px;background:var(--primary);color:white;font:inherit;font-weight:750;cursor:pointer;transition:.18s}.btn:hover{filter:brightness(1.06);transform:translateY(-1px)}.btn.secondary{background:var(--soft);color:var(--primary)}.btn.small{padding:9px 12px;font-size:.84rem}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:34px 0 16px}.section-head h2{font-size:1.5rem;letter-spacing:-.5px;margin:0}.section-head p{margin:5px 0 0;color:var(--muted);font-size:.9rem}.count{color:var(--muted);font-size:.85rem}
+.toolbar{display:flex;gap:10px;align-items:center;margin-bottom:15px}.toolbar input{flex:1}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:15px}.tab{border:1px solid var(--line);background:#fff;color:var(--muted);border-radius:30px;padding:8px 13px;font:inherit;font-size:.85rem;font-weight:700;cursor:pointer}.tab.active{background:var(--soft);border-color:#d9d5ff;color:var(--primary)}
+.font-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.font-item{min-width:0;background:#fff;border:1px solid var(--line);border-radius:15px;padding:14px;display:flex;align-items:center;justify-content:space-between;gap:10px}.font-copy{min-width:0}.font-name{font-size:.76rem;color:var(--muted);margin-bottom:7px;text-transform:capitalize}.font-preview{font-size:1.08rem;overflow-wrap:anywhere;line-height:1.4}.font-item .btn{flex-shrink:0}.empty{text-align:center;color:var(--muted);padding:30px;background:white;border:1px dashed var(--line);border-radius:14px}.hint{color:var(--muted);font-size:.78rem;margin-top:9px}
+footer{text-align:center;padding:25px;color:var(--muted);border-top:1px solid var(--line);font-size:.85rem}
+.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);background:#242640;color:white;padding:11px 17px;border-radius:30px;font-size:.88rem;opacity:0;pointer-events:none;transition:.2s;z-index:10}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:650px){.nav{align-items:flex-start;flex-direction:column}.nav-note{font-size:.8rem}main{padding:20px 14px 50px}.hero{padding:35px 4px 24px}.panel{padding:16px}.font-grid{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}.font-item{padding:12px}.font-preview{font-size:1rem}.controls,.toolbar{flex-direction:column}.controls>*{width:100%}.toolbar input,.toolbar button{width:100%}}
+</style>
+</head>
+<body>
+<header><div class="nav"><a class="brand" href="#">Font<span>ify</span> ✦</a><div class="nav-note">Free online stylish text generator</div></div></header>
+<main>
+<section class="hero"><span class="tag">✦ 200+ COPYABLE TEXT STYLES</span><h1>Make your text <span class="gradient">stand out.</span></h1><p>Type your name, word or caption and explore 200+ stylish Unicode text designs. Find a look you love and copy it in one tap.</p></section>
+<section class="panel" aria-label="Text input"><label class="field-label" for="mainText">Enter your text</label><input id="mainText" maxlength="100" value="Fontify" placeholder="Type your name or text..."><div class="controls"><button class="btn" id="generateBtn">Generate stylish fonts ✨</button><button class="btn secondary" id="clearBtn">Clear text</button></div><div class="hint">These are Unicode characters, not installed font files. Some styles may look different on older devices or apps.</div></section>
+<section id="fonts"><div class="section-head"><div><h2>Explore Stylish Fonts</h2><p>Search, filter and copy your favourite style.</p></div><span class="count" id="fontCount">200+ styles</span></div>
+<div class="toolbar"><input id="search" placeholder="Search styles (e.g. bold, script, cute)..." aria-label="Search font styles"><button class="btn secondary" id="copyAll">Copy all results</button></div>
+<div class="tabs" id="fontTabs"><button class="tab active" data-filter="all">All styles</button><button class="tab" data-filter="bold">Bold</button><button class="tab" data-filter="script">Script</button><button class="tab" data-filter="mono">Mono</button><button class="tab" data-filter="decor">Decorative</button><button class="tab" data-filter="special">Special</button></div>
+<div class="font-grid" id="fontGrid"></div></section>
+</main>
+<footer>Made with ✦ by Fontify · Free stylish text tools</footer><div class="toast" id="toast">Copied to clipboard!</div>
+<script>
+const input=document.getElementById('mainText'),grid=document.getElementById('fontGrid');
+const styles=[];
+function mapChars(text,upper,lower,digits){return Array.from(text).map(ch=>{const n=ch.codePointAt(0);if(n>=65&&n<=90&&upper!=='-')return String.fromCodePoint(upper.codePointAt(0)+n-65);if(n>=97&&n<=122&&lower!=='-')return String.fromCodePoint(lower.codePointAt(0)+n-97);if(n>=48&&n<=57&&digits!=='-')return String.fromCodePoint(digits.codePointAt(0)+n-48);return ch}).join('')}
+function add(name,category,fn){styles.push({name,category,fn})}
+const alphabets=[
+['Bold','bold','𝐀','𝐚','𝟎'],['Italic','script','𝐴','𝑎','-'],['Bold italic','bold','𝑨','𝒂','-'],['Script','script','𝒜','𝒶','-'],['Bold script','script','𝓐','𝓪','-'],['Fraktur','special','𝔄','𝔞','-'],['Bold fraktur','special','𝕬','𝖆','-'],['Double-struck','special','𝔸','𝕒','𝟘'],['Sans serif','special','𝖠','𝖺','𝟢'],['Sans bold','bold','𝗔','𝗮','𝟬'],['Sans italic','script','𝘈','𝘢','-'],['Sans bold italic','bold','𝘼','𝙖','-'],['Monospace','mono','𝙰','𝚊','𝟶']
+];
+alphabets.forEach(([n,c,u,l,d])=>add(n,c,t=>mapChars(t,u,l,d)));
+const circled=t=>Array.from(t).map(ch=>{let n=ch.codePointAt(0);if(n>=65&&n<=90)return String.fromCodePoint(0x24B6+n-65);if(n>=97&&n<=122)return String.fromCodePoint(0x24D0+n-97);if(n>=49&&n<=57)return String.fromCodePoint(0x2460+n-49);return ch}).join('');
+const smallMap={a:'ᴀ',b:'ʙ',c:'ᴄ',d:'ᴅ',e:'ᴇ',f:'ꜰ',g:'ɢ',h:'ʜ',i:'ɪ',j:'ᴊ',k:'ᴋ',l:'ʟ',m:'ᴍ',n:'ɴ',o:'ᴏ',p:'ᴘ',q:'ǫ',r:'ʀ',s:'s',t:'ᴛ',u:'ᴜ',v:'ᴠ',w:'ᴡ',x:'x',y:'ʏ',z:'ᴢ'};
+const flipMap={a:'ɐ',b:'q',c:'ɔ',d:'p',e:'ǝ',f:'ɟ',g:'ƃ',h:'ɥ',i:'ᴉ',j:'ɾ',k:'ʞ',l:'ן',m:'ɯ',n:'u',o:'o',p:'d',q:'b',r:'ɹ',s:'s',t:'ʇ',u:'n',v:'ʌ',w:'ʍ',x:'x',y:'ʎ',z:'z','?':'¿','!':'¡'};
+const decorations=[
+['Circled','special',circled],['Fullwidth','special',t=>Array.from(t).map(c=>{let n=c.codePointAt(0);return n>=33&&n<=126?String.fromCodePoint(n+0xFEE0):c}).join('')],
+['Small caps','special',t=>t.toLowerCase().replace(/[a-z]/g,c=>smallMap[c]||c)],['Upside down','special',t=>Array.from(t).reverse().map(c=>flipMap[c.toLowerCase()]||c).join('')],
+['Strikethrough','special',t=>Array.from(t).map(c=>c===' '?' ':c+'\u0336').join('')],['Underline','special',t=>Array.from(t).map(c=>c===' '?' ':c+'\u0332').join('')],
+['Double underline','special',t=>Array.from(t).map(c=>c===' '?' ':c+'\u0333').join('')],['Dotted','special',t=>Array.from(t).map(c=>c===' '?' ':c+'\u0307').join('')],
+['Hearts','decor',t=>'♡ '+t+' ♡'],['Stars','decor',t=>'✦ '+t+' ✦'],['Crown','decor',t=>'♛ '+t+' ♛'],['Wings','decor',t=>'꧁ '+t+' ꧂'],
+['Brackets','decor',t=>'『 '+t+' 』'],['Angle brackets','decor',t=>'〈 '+t+' 〉'],['Flower','decor',t=>'❀ '+t+' ❀'],['Sparkle','decor',t=>'⋆｡°✩ '+t+' ✩°｡⋆'],
+['Royal','decor',t=>'♕『'+t+'』♕'],['Arrow','decor',t=>'➳ '+t+' ➳'],['Music','decor',t=>'♪ '+t+' ♫'],['Star frame','decor',t=>'★彡 '+t+' 彡★'],
+['Cute','decor',t=>'♡(˃͈ દ ˂͈ ༶) '+t],['Fire','decor',t=>'🔥 '+t+' 🔥'],['Diamond','decor',t=>'◆ '+t+' ◆'],['Circle frame','decor',t=>'◉ '+t+' ◉'],
+['Wave','decor',t=>'〜 '+t+' 〜'],['Cross','decor',t=>'† '+t+' †'],['Leaf','decor',t=>'❧ '+t+' ❧'],['Moon','decor',t=>'☾ '+t+' ☽'],
+['Smile','decor',t=>'ツ '+t+' ツ'],['Japanese frame','decor',t=>'乂 '+t+' 乂'],['Katakana frame','decor',t=>'メ '+t+' メ'],['Gaming frame','decor',t=>'亗 '+t+' 亗']
+];
+decorations.forEach(([n,c,f])=>add(n,c,f));
+const prefixes=['亗','乂','メ','么','彡','『』','꧁꧂','ツ','★','♛','×͜×','࿐','〆','々','⚡','♕','☯','✧','✿','➳'];
+const suffixes=['亗','乂','メ','么','彡','࿐','ツ','★','♛','〆','々','⚡','✓','✧','✿','☯','♕','➳','✦','♡'];
+for(let i=0;i<100;i++){const p=prefixes[i%prefixes.length],s=suffixes[(i*7+3)%suffixes.length];add('Decorative mix '+(i+1),'decor',t=>i%4===0?p+t+s:i%4===1?p+' '+t+' '+s:i%4===2?'『'+p+t+s+'』':t+' '+p+s)}
+const extraPairs=[
+['Parentheses',t=>'（ '+t+' ）'],['Square frame',t=>'【 '+t+' 】'],['Black square',t=>'▪ '+t+' ▪'],['White stars',t=>'☆ '+t+' ☆'],['Flower frame',t=>'ꕤ '+t+' ꕤ'],['Cloud frame',t=>'☁ '+t+' ☁'],['Sparkles 2',t=>'｡･:*:･ﾟ★ '+t+' ★ﾟ･:*:･｡'],['Music frame',t=>'♬ '+t+' ♬'],['Heart arrows',t=>'➶♡ '+t+' ♡➶'],['Vintage',t=>'༺ '+t+' ༻'],['Mystic',t=>'༒ '+t+' ༒'],['Royal 2',t=>'♚ '+t+' ♚'],['Cute 2',t=>'૮₍ ˶ᵔ ᵕ ᵔ˶ ₎ა '+t],['Minimal',t=>'— '+t+' —'],['Dots',t=>'• '+t+' •'],['Double stars',t=>'⋆ ˚｡⋆ '+t+' ⋆｡˚ ⋆'],['Flower stars',t=>'✿ '+t+' ✿'],['Japanese 2',t=>'卍 '+t+' 卍'],['Decor line',t=>'╰┈➤ '+t],['Box line',t=>'╔═ '+t+' ═╗']
+];
+extraPairs.forEach(([n,f])=>add(n,'decor',f));
+function toast(msg){const el=document.getElementById('toast');el.textContent=msg;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),1500)}
+async function copyText(text){try{await navigator.clipboard.writeText(text);toast('Copied to clipboard!')}catch(e){const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();toast('Copied to clipboard!')}}
+function getVisible(){const filter=document.querySelector('.tab.active').dataset.filter;const q=document.getElementById('search').value.trim().toLowerCase();return styles.filter(s=>(filter==='all'||s.category===filter)&&(!q||s.name.toLowerCase().includes(q)))}
+function render(){const text=input.value||'Your text',visible=getVisible();grid.innerHTML='';document.getElementById('fontCount').textContent=visible.length+' styles shown · '+styles.length+' total';if(!visible.length){grid.innerHTML='<div class="empty">No styles found. Try another search.</div>';return}visible.forEach(s=>{const value=s.fn(text),item=document.createElement('div');item.className='font-item';const left=document.createElement('div');left.className='font-copy';const name=document.createElement('div');name.className='font-name';name.textContent=s.name;const preview=document.createElement('div');preview.className='font-preview';preview.textContent=value;left.append(name,preview);const btn=document.createElement('button');btn.className='btn small';btn.textContent='Copy';btn.onclick=()=>copyText(value);item.append(left,btn);grid.append(item)})}
+document.getElementById('generateBtn').onclick=()=>{render();document.getElementById('fonts').scrollIntoView({behavior:'smooth'})};
+document.getElementById('clearBtn').onclick=()=>{input.value='';render();input.focus()};
+input.addEventListener('input',render);document.getElementById('search').addEventListener('input',render);
+document.getElementById('fontTabs').addEventListener('click',e=>{if(!e.target.matches('.tab'))return;document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));e.target.classList.add('active');render()});
+document.getElementById('copyAll').onclick=()=>{const text=input.value||'Your text';const all=getVisible().map(s=>s.name+': '+s.fn(text)).join('\n');if(all)copyText(all);else toast('No styles to copy')};
+render();
+</script>
+</body>
+</html>
